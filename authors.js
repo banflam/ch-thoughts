@@ -5,8 +5,8 @@ function addAuthorElement(author) {
     .createElement("li")
     .appendChild(document.createElement("p"));
 
-  const author_text = document.createTextNode(author);
-  finalListElement.appendChild(author_text);
+  const author_text_node = document.createTextNode(author);
+  finalListElement.appendChild(author_text_node);
 
   document
     .getElementById("all-authors-insertion")
