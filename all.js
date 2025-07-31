@@ -1,7 +1,5 @@
 import quotes from "./quotes.js";
 
-document.body.onload = addElement;
-
 function addElement(text, author) {
   const finalListElement = document
     .createElement("li")
