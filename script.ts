@@ -280,6 +280,6 @@ const author_text = document.querySelector(".author_text");
 
 const set_random_quote = () => {
   const random_quote = quotes[Math.floor(Math.random() * quotes.length)];
-  quote_text.innerText = random_quote.text;
+  quote_text?.textContent = random_quote.text;
   author_text?.innerText = random_quote.author;
 };
