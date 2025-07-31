@@ -19,11 +19,13 @@ function addElement() {
   quoteElement.appendChild(quote_text);
   citeElement.appendChild(cite_text);
 
-  const newNestedBlockQuote = finalListElement.appendChild(quoteElement);
-  newNestedBlockQuote.appendChild(citeElement);
+  finalListElement.appendChild(quoteElement);
+  finalListElement.appendChild(citeElement);
 
-  const targetList = document.getElementById("all-quotes-insertion");
-  targetList.appendChild(finalListElement);
+  //const newNestedBlockQuote = finalListElement.appendChild(quoteElement);
+  //newNestedBlockQuote.appendChild(citeElement);
+
+  document.getElementById("all-quotes-insertion").appendChild(finalListElement);
 }
 
 /*
