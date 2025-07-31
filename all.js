@@ -18,6 +18,18 @@ function addElement() {
   const newListElementBlockQuoteCitationText =
     document.createTextNode("Test cited author");
 
+  // stitch it all together
+
+  newListElementBlockquoteQuotation.appendChild(newListElementBlockquoteText);
+  newListElementBlockQuoteCitation.appendChild(
+    newListElementBlockQuoteCitationText
+  );
+
+  const newNestedBlockQuote = newNestedBlockquoteElement.appendChild(
+    newListElementBlockquoteQuotation
+  );
+  newNestedBlockQuote.appendChild(newListElementBlockQuoteCitation);
+
   // add the newly created element and its content into the DOM
   const targetList = document.getElementById("all-quotes-insertion");
   targetList.appendChild(newNestedBlockquoteElement);
