@@ -20,9 +20,11 @@ function addElement() {
 
   // add the newly created element and its content into the DOM
   const targetList = document.getElementById("all-quotes-insertion");
-  document.body.innerHTML = newNestedBlockquoteElement;
+  targetList.appendChild(newNestedBlockquoteElement);
+  //document.body.innerHTML = newNestedBlockquoteElement;
 }
 
+/*
 <li>
   <blockquote cite="/t/4">
     <q>
@@ -34,3 +36,4 @@ function addElement() {
     </cite>
   </blockquote>
 </li>;
+*/
