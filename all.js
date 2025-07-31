@@ -3,37 +3,27 @@ import quotes from "./quotes.js";
 document.body.onload = addElement;
 
 function addElement() {
-  const newNestedBlockquoteElement = document
+  const finalListElement = document
     .createElement("li")
     .appendChild(document.createElement("blockquote"));
 
-  const newListElementBlockquoteQuotation = document.createElement("q");
+  const quoteElement = document.createElement("q");
+  const citeElement = document.createElement("cite");
 
-  const newListElementBlockquoteText = document.createTextNode(
+  const quote_text = document.createTextNode(
     "This is a test quote to see if it is added correctly."
   );
 
-  const newListElementBlockQuoteCitation = document.createElement("cite");
+  const cite_text = document.createTextNode("Test cited author");
 
-  const newListElementBlockQuoteCitationText =
-    document.createTextNode("Test cited author");
+  quoteElement.appendChild(quote_text);
+  citeElement.appendChild(cite_text);
 
-  // stitch it all together
+  const newNestedBlockQuote = finalListElement.appendChild(quoteElement);
+  newNestedBlockQuote.appendChild(citeElement);
 
-  newListElementBlockquoteQuotation.appendChild(newListElementBlockquoteText);
-  newListElementBlockQuoteCitation.appendChild(
-    newListElementBlockQuoteCitationText
-  );
-
-  const newNestedBlockQuote = newNestedBlockquoteElement.appendChild(
-    newListElementBlockquoteQuotation
-  );
-  newNestedBlockQuote.appendChild(newListElementBlockQuoteCitation);
-
-  // add the newly created element and its content into the DOM
   const targetList = document.getElementById("all-quotes-insertion");
-  targetList.appendChild(newNestedBlockquoteElement);
-  //document.body.innerHTML = newNestedBlockquoteElement;
+  targetList.appendChild(finalListElement);
 }
 
 /*
