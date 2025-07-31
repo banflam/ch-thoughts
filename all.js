@@ -1,6 +1,6 @@
 import quotes from "./quotes.js";
 
-function addElement(text, author) {
+function addQuoteElement(text, author) {
   const finalListElement = document
     .createElement("li")
     .appendChild(document.createElement("blockquote"));
@@ -20,4 +20,4 @@ function addElement(text, author) {
   document.getElementById("all-quotes-insertion").appendChild(finalListElement);
 }
 
-quotes.forEach((quote) => addElement(quote.text, quote.author));
+quotes.forEach((quote) => addQuoteElement(quote.text, quote.author));
