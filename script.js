@@ -228,8 +228,8 @@ const quotes = [
   },
 ];
 
-const quote_text = document.querySelector(".quote_text");
-const author_text = document.querySelector(".author_text");
+const quote_text = document.getElementById("quote_text");
+const author_text = document.getElementById("author_text");
 const random_link = document.querySelector(".random");
 
 console.log(quote_text, author_text, random_link);
@@ -243,5 +243,6 @@ const set_random_quote = function () {
   author_text.textContent = random_quote.author;
 };
 random_link.addEventListener("click", function (e) {
+  e.preventDefault();
   set_random_quote();
 });
