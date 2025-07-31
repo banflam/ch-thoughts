@@ -273,5 +273,3 @@ const quotes: Quote[] = [
     author: "Stephan Zweig",
   },
 ];
-
-export default quotes;
