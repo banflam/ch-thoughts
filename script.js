@@ -111,15 +111,15 @@ const quotes = [
   },
   {
     text: "I got locked up when I was living in Maryland, selling drugs and stuff. But that doesn't mean that the game was over. That's how I equate chess with life.",
-    author: "Marcel Anderson, chess hustler",
+    author: "Marcel Anderson",
   },
   {
     text: "My girlfriend said, ‘It’s either me or the chess pieces, Marcel.’... I looked at my chess pieces, I looked at her again. And the more I'm looking at her, the more I can see how toxic she is. The more I look at my chess pieces, I can see lots of solitude. I say, “You know what? I'll talk to you later.” I picked up my pieces, I left.",
-    author: "Marcel Anderson, chess hustler",
+    author: "Marcel Anderson",
   },
   {
     text: "I threw my phone off the Brooklyn Bridge. You need to give the game your full attention.",
-    author: "Ambakisye Osayaba, chess hustler",
+    author: "Ambakisye Osayaba",
   },
   {
     text: "Alekhine is a poet who creates a work of art out of something that would hardly inspire another man to send home a picture post card.",
@@ -198,7 +198,7 @@ const quotes = [
     author: "Savielly Tartakower",
   },
   {
-    text: "That which has reached us from the discoveries of their clear thinking and the marvels of their inventions is the (game) of chess. The Indians have, in the construction of its cells, its double numbers, its symbols and secrets, reached the forefront of knowledge.",
+    text: "That which has reached us from the discoveries of their clear thinking and the marvels of their inventions is the game of chess. The Indians have, in the construction of its cells, its double numbers, its symbols and secrets, reached the forefront of knowledge.",
     author: "Said al-Andalusi",
   },
   {
@@ -228,8 +228,8 @@ const quotes = [
   },
 ];
 
-const quote_text = document.getElementById("quote_text");
-const author_text = document.getElementById("author_text");
+const quote_text = document.querySelector(".quote_text");
+const author_text = document.querySelector(".author_text");
 const random_link = document.querySelector(".random");
 
 console.log(quote_text, author_text, random_link);
