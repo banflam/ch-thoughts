@@ -1,4 +1,4 @@
-var quotes = [
+const quotes = [
   {
     text: "Real total restraint, which reigns over whole stretches of the board and which gives your opponent breathing difficulties, is only possible when that opponent is suffering from the disadvantage of doubled pawns.",
     author: "Aron Nimzowitsch",
@@ -227,10 +227,14 @@ var quotes = [
     author: "Stephan Zweig",
   },
 ];
-var quote_text = document.querySelector(".quote_text");
-var author_text = document.querySelector(".author_text");
-var random_link = document.querySelector(".random");
-var set_random_quote = function () {
+
+const quote_text = document.querySelector(".quote_text");
+const author_text = document.querySelector(".author_text");
+const random_link = document.querySelector(".random");
+
+console.log(quote_text, author_text, random_link);
+
+const set_random_quote = function () {
   var random_quote = quotes[Math.floor(Math.random() * quotes.length)];
   console.log(random_quote);
   console.log(quote_text);
