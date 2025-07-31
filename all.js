@@ -2,7 +2,7 @@ import quotes from "./quotes.js";
 
 document.body.onload = addElement;
 
-function addElement() {
+function addElement(text, author) {
   const finalListElement = document
     .createElement("li")
     .appendChild(document.createElement("blockquote"));
@@ -10,11 +10,8 @@ function addElement() {
   const quoteElement = document.createElement("q");
   const citeElement = document.createElement("cite");
 
-  const quote_text = document.createTextNode(
-    "This is a test quote to see if it is added correctly."
-  );
-
-  const cite_text = document.createTextNode("Test cited author");
+  const quote_text = document.createTextNode(text);
+  const cite_text = document.createTextNode(author);
 
   quoteElement.appendChild(quote_text);
   citeElement.appendChild(cite_text);
@@ -22,22 +19,7 @@ function addElement() {
   finalListElement.appendChild(quoteElement);
   finalListElement.appendChild(citeElement);
 
-  //const newNestedBlockQuote = finalListElement.appendChild(quoteElement);
-  //newNestedBlockQuote.appendChild(citeElement);
-
   document.getElementById("all-quotes-insertion").appendChild(finalListElement);
 }
 
-/*
-<li>
-  <blockquote cite="/t/4">
-    <q>
-      Let sounds be themselves rather than vehicles for man-made theories or
-      expression of human sentiments.
-    </q>
-    <cite>
-      <a href="/t/4">John Cage</a>
-    </cite>
-  </blockquote>
-</li>;
-*/
+quotes.forEach((quote) => addElement(quote.text, quote.author));
