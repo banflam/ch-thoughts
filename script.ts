@@ -282,6 +282,9 @@ const random_link = document.querySelector(".random");
 
 const set_random_quote = () => {
   const random_quote = quotes[Math.floor(Math.random() * quotes.length)];
+  console.log(random_quote);
+  console.log(quote_text);
+  console.log(author_text);
   quote_text!.textContent = random_quote.text;
   author_text!.textContent = random_quote.author;
 };
