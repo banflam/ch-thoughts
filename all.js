@@ -3,20 +3,24 @@ import quotes from "./quotes.js";
 document.body.onload = addElement;
 
 function addElement() {
-  // create a new div element
-  const newDiv = document.createElement("div");
+  const newNestedBlockquoteElement = document
+    .createElement("li")
+    .appendChild(document.createElement("blockquote"));
 
-  const newListElement = document.createElement("li");
+  const newListElementBlockquoteQuotation = document.createElement("q");
 
-  // and give it some content
-  const newContent = document.createTextNode("Hi there and greetings!");
+  const newListElementBlockquoteText = document.createTextNode(
+    "This is a test quote to see if it is added correctly."
+  );
 
-  // add the text node to the newly created div
-  newDiv.appendChild(newContent);
+  const newListElementBlockQuoteCitation = document.createElement("cite");
+
+  const newListElementBlockQuoteCitationText =
+    document.createTextNode("Test cited author");
 
   // add the newly created element and its content into the DOM
-  const currentDiv = document.getElementById("div1");
-  document.body.insertBefore(newDiv, currentDiv);
+  const targetList = document.getElementById("all-quotes-insertion");
+  document.body.innerHTML = newNestedBlockquoteElement;
 }
 
 <li>
