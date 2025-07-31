@@ -236,14 +236,12 @@ const author_text_footer = document.getElementById("author_text_footer");
 
 const random_link = document.querySelector(".random");
 
-console.log(quote_text_main, author_text_main, random_link);
-
 const set_random_quotes = function () {
   var main_quote_idx = Math.floor(Math.random() * quotes.length);
   var footer_quote_idx = Math.floor(Math.random() * quotes.length);
 
   while (main_quote_idx === footer_quote_idx) {
-    footer_quote_idx = Math.floor(Math.floor(Math.random() * quotes.length));
+    footer_quote_idx = Math.floor(Math.random() * quotes.length);
   }
 
   var quote_main = quotes[main_quote_idx];
