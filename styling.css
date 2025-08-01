@@ -120,10 +120,20 @@ nav a {
 nav ul {
   margin: 0;
 }
-nav ul li {
+#nav_bar {
   display: inline;
 }
 #nav li a,
+#nav_bar {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#nav_bar li {
+  display: inline;
+  margin-right: 10px; /* optional spacing between items */
+}
 #langforms li a {
   text-decoration: underline;
 }
