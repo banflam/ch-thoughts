@@ -14,7 +14,6 @@ const set_random_quotes = function () {
   while (main_quote_idx === footer_quote_idx) {
     footer_quote_idx = Math.floor(Math.random() * quotes.length);
   }
-
   var quote_main = quotes[main_quote_idx];
   var quote_footer = quotes[footer_quote_idx];
 
@@ -24,6 +23,7 @@ const set_random_quotes = function () {
   quote_text_footer.textContent = quote_footer.text;
   author_text_footer.textContent = quote_footer.author;
 };
+document.body.onload = set_random_quotes;
 
 random_link.addEventListener("click", function (e) {
   e.preventDefault();
