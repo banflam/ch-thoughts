@@ -26,36 +26,6 @@ div#page ul {
 div#page li {
   list-style-type: none;
 }
-div#page :lang(ar) > q {
-  quotes: "“" "”" "‘" "’";
-}
-div#page :lang(en) > q {
-  quotes: "“" "”" "‘" "’";
-}
-div#page :lang(pt) > q {
-  quotes: "“" "”" "‘" "’";
-}
-div#page :lang(zh) > q {
-  quotes: "“" "”" "‘" "’";
-}
-div#page :lang(fr) > q {
-  quotes: "« " " »" "“" "”";
-}
-div#page :lang(it) > q {
-  quotes: "«" "»" "“" "”";
-}
-div#page :lang(ru) > q {
-  quotes: "«" "»" "“" "”";
-}
-div#page :lang(es) > q {
-  quotes: "«" "»" "“" "”";
-}
-div#page :lang(de) > q {
-  quotes: "„" "“" "‚" "‘";
-}
-div#page :lang(ja) > q {
-  quotes: "「" "」" "『" "』";
-}
 div#page q:before {
   content: open-quote;
 }
@@ -132,7 +102,7 @@ nav ul {
 
 #nav_bar li {
   display: inline;
-  margin-right: 10px; /* optional spacing between items */
+  margin-right: 10px;
 }
 #langforms li a {
   text-decoration: underline;
